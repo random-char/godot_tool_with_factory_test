@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://Actor/Actor.gd"
+}, {
+"base": "ModelInterface",
+"class": "Model1",
+"language": "GDScript",
+"path": "res://Model/1/Model1.gd"
+}, {
+"base": "ModelInterface",
+"class": "Model2",
+"language": "GDScript",
+"path": "res://Model/2/Model2.gd"
+}, {
+"base": "Resource",
+"class": "ModelFactory",
+"language": "GDScript",
+"path": "res://Model/ModelFactory.gd"
+}, {
+"base": "Node2D",
+"class": "ModelInterface",
+"language": "GDScript",
+"path": "res://Model/ModelInterface.gd"
+} ]
+_global_script_class_icons={
+"Actor": "",
+"Model1": "",
+"Model2": "",
+"ModelFactory": "",
+"ModelInterface": ""
+}
+
+[application]
+
+config/name="tool_with_factory"
+run/main_scene="res://Level.tscn"
+config/icon="res://icon.png"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
